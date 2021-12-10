@@ -148,6 +148,8 @@ app.route("/removebyname/:name").delete(function(req,res) {
     })
 })
 
+//Chain Search Query Helpers to Narrow Search Results
+
 app.route("/siblings") .get(function(req, res) {
     Person.find({ favoriteFoods: "burritos" })
       .sort({ name: "asc" })
